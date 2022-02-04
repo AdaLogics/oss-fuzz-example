@@ -1,0 +1,6 @@
+homepage: "https://github.com/AdaLogics/oss-fuzz-example"
+main_repo: 'https://github.com/AdaLogics/oss-fuzz-example'
+primary_contact: "adam@adalogics.com"
+auto_ccs :
+  - "david@adalogics.com"
+language: c

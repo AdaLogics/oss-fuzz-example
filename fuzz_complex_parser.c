@@ -12,6 +12,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-int count_lowercase_letters(char *input);
-int parse_complex_format(char *input);
-int parse_complex_format_second(char *input);
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+
+#include "char_lib.h"
+
+int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
+  char *ns = malloc(size+1);
+  memcpy(ns, data, size);
+  ns[size] = '\0';
+  
+  parse_complex_format(ns);
+  
+  free(ns);
+  return 0;
+}

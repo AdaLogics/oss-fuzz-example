@@ -99,7 +99,7 @@ int parse_complex_format(char *input) {
     }
 
     if (sum < 20) {
-        return read_key_figures(input, length);
+        return read_key_figures(input, length/2);
     }
     else {
         if (sum > 40) {
